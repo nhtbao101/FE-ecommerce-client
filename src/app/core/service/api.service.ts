@@ -104,7 +104,7 @@ export class ApiService {
   }
 
   private _setInterceptors() {
-    this.axiosInstance.interceptors.request.use((request: AxiosRequestConfig) =>
+    this.axiosInstance.interceptors.request.use((request): any =>
       this.authHelper.setAuthHeader(request)
     );
     this.axiosInstance.interceptors.response.use(
